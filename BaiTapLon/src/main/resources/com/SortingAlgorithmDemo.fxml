@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SortingAlgorithmDemoController">
+    <children>
+        <GridPane layoutX="40.0" layoutY="40.0" prefHeight="640.0" prefWidth="1200.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+                <ColumnConstraints percentWidth="10" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="100" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="square1" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="0"/>
+                <Label fx:id="square2" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="1" />
+                <Label fx:id="square3" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="2" />
+                <Label fx:id="square4" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="3" />
+                <Label fx:id="square5" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="4" />
+                <Label fx:id="square6" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="5" />
+                <Label fx:id="square7" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="6" />
+                <Label fx:id="square8" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="7" />
+                <Label fx:id="square9" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="8" />
+                <Label fx:id="square10" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="9" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
