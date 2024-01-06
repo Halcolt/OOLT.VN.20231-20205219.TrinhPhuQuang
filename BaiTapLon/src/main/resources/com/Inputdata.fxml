@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.Controller.InputdataController"
+            prefHeight="720" prefWidth="1080">
+    <GridPane fx:id="mainGrid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="20.0" />
+        <ColumnConstraints percentWidth="20.0" />
+        <ColumnConstraints percentWidth="20.0" />
+        <ColumnConstraints percentWidth="20.0" />
+        <ColumnConstraints percentWidth="20.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="20.0" />
+        <RowConstraints percentHeight="20.0" />
+        <RowConstraints percentHeight="20.0" />
+        <RowConstraints percentHeight="20.0" />
+        <RowConstraints percentHeight="20.0" />
+    </rowConstraints>
+    </GridPane>
+</AnchorPane>

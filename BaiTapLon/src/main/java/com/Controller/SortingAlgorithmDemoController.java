@@ -1,12 +1,14 @@
-package com;
+package com.Controller;
 
+import com.MainApp;
+import com.SwapUtil;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 import com.SortType.BubbleSort;
 
-public class SortingAlgorithmDemoController extends SwapUtil{
+public class SortingAlgorithmDemoController extends SwapUtil {
 
     @FXML
     private Label square1;
@@ -52,8 +54,6 @@ public class SortingAlgorithmDemoController extends SwapUtil{
 
     public void SortWithAnimation(int[] arr, int i, int j) {
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
-
-        // Check if we need to swap
         if (i >= 0 && j >= 0) {
             swap(data, i, j);
             SetData();

@@ -5,6 +5,5 @@ public class SwapUtil {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-//        SortingAlgorithmDemoController.SetData(arr);
     }
 }

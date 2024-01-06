@@ -3,7 +3,7 @@ package com.SortType;
 public class ShellSort {
     public static int[] shellSortWithPositions(int[] arr) {
         int n = arr.length;
-        int[] positions = new int[2]; // To store the positions i and j
+        int[] positions = new int[2];
 
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {

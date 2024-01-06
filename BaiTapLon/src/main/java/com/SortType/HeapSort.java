@@ -3,7 +3,7 @@ package com.SortType;
 public class HeapSort {
     public static int[] heapSortWithPositions(int[] arr) {
         int n = arr.length;
-        int[] positions = new int[2]; // To store the positions i and j
+        int[] positions = new int[2];
 
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(arr, n, i, positions);

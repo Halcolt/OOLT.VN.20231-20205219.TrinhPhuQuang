@@ -9,25 +9,13 @@ import java.io.IOException;
 
 public class MainApp extends Application {
 
+    public static int[] data = {10, 20, 3, 4, 50, 6, 70, 8, 9, 1}; // Demo data
     private static Stage primaryStage;
-    public static int[] data = {10, 20, 3, 4, 50, 6, 70, 8, 9, 10}; // Sample data
-
-    public static void loadScene(String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxmlFile));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    
     @Override
     public void start(Stage primaryStage) {
         MainApp.primaryStage = primaryStage;
-        loadScene("SortingAlgorithmDemo.fxml");
+        Utilities.loadScene(primaryStage, "MainMenu.fxml");
     }
 
     public static void main(String[] args) {
