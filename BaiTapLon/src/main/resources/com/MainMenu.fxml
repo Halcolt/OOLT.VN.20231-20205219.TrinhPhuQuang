@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -28,39 +28,58 @@
             <RowConstraints percentHeight="20.0" />
         </rowConstraints>
       <children>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sorting Algorithm Demonstrate" GridPane.columnIndex="1" GridPane.columnSpan="3">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sorting Algorithm Demonstration" GridPane.columnIndex="1" GridPane.columnSpan="3">
             <font>
                <Font size="40.0" />
             </font>
          </Text>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: TOP_LEFT;" text="Tùy chọn:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: TOP_LEFT;" text="Chọn thuật toán" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
             <font>
                <Font size="30.0" />
             </font>
          </Text>
-         <VBox prefHeight="200.0" prefWidth="100.0" spacing="20" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <children>
-               <RadioButton fx:id="ButtonManual" mnemonicParsing="false" text="Nhập dữ liệu thủ công">
-                  <font>
-                     <Font size="20.0" />
-                  </font>
-               </RadioButton>
-               <RadioButton fx:id="ButtonAutomatic" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Sử dụng dữ liệu mẫu">
-                  <font>
-                     <Font size="20.0" />
-                  </font>
-               </RadioButton>
-               <HBox layoutX="200.0" prefHeight="43.0" prefWidth="461.0">
+               <VBox layoutX="12.0" layoutY="62.0" prefHeight="200.0" prefWidth="170.0" spacing="51.2">
                   <children>
-                     <Button fx:id="ButtonConfirm" mnemonicParsing="false" prefHeight="55.0" prefWidth="132.0" text="Xác nhận" onAction="#handleButtonConfirm">
+                     <RadioButton fx:id="ButtonBubbleSort" mnemonicParsing="false" text="BubbleSort">
                         <font>
                            <Font size="20.0" />
                         </font>
-                     </Button>
+                     </RadioButton>
+                     <RadioButton fx:id="ButtonHeapSort" mnemonicParsing="false" text="HeapSort">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </RadioButton>
+                     <RadioButton fx:id="ButtonShellSort" mnemonicParsing="false" text="ShellSort">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </RadioButton>
                   </children>
-               </HBox>
+               </VBox>
+               <Button fx:id="ButtonConfirm" layoutX="3.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleButtonConfirm" text="Xác Nhận">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
             </children>
-         </VBox>
+         </Pane>
+         <Pane prefHeight="144.0" prefWidth="409.0" GridPane.columnSpan="5" GridPane.rowIndex="4">
+            <children>
+               <Button fx:id="ButtonHelp" layoutX="1149.0" layoutY="54.0" mnemonicParsing="false" text="Trợ Giúp">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button fx:id="ButtonExit" layoutX="55.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleButtonExit" text="Thoát" textFill="RED">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
       </children>
     </GridPane>
 </AnchorPane>
