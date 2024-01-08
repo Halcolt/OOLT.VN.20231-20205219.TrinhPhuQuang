@@ -84,33 +84,33 @@
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="277.0" layoutY="457.0" prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <VBox layoutY="-4.0" prefHeight="200.0" prefWidth="289.0" spacing="20">
-               <children>
-                  <RadioButton fx:id="ButtonManual" mnemonicParsing="false" text="Nhập dữ liệu thủ công">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </RadioButton>
-                  <RadioButton fx:id="ButtonAutomatic" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Sử dụng dữ ngẫu nhiên">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </RadioButton>
-                  <HBox layoutX="200.0" prefHeight="43.0" prefWidth="461.0">
-                     <children>
-                        <Button fx:id="ButtonConfirm" mnemonicParsing="false" onAction="#handleButtonConfirm" prefHeight="55.0" prefWidth="132.0" text="Xác nhận">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
+        <Pane layoutX="277.0" layoutY="457.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <VBox layoutY="-4.0" prefHeight="200.0" prefWidth="289.0" spacing="20">
+                    <children>
+                        <RadioButton fx:id="ButtonManual" mnemonicParsing="false" text="Nhập dữ liệu thủ công">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="ButtonAutomatic" mnemonicParsing="false" text="Sử dụng dữ liệu ngẫu nhiên">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </RadioButton>
+                        <HBox prefHeight="43.0" prefWidth="461.0">
+                            <children>
+                                <Button fx:id="ButtonConfirm" mnemonicParsing="false" onAction="#handleButtonConfirm" prefHeight="55.0" prefWidth="132.0" text="Xác nhận">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
       <Button fx:id="ButtonReturn" layoutX="30.0" layoutY="632.0" mnemonicParsing="false" text="Quay lại">
          <font>
             <Font size="20.0" />
