@@ -1,25 +1,26 @@
 package com.SortType;
 
 public class HeapSort {
-    public static int[] heapSortWithPositions(int[] arr) {
-        int n = arr.length;
-        int[] positions = new int[2];
+    public static int[] heapSortWithPositions(int[] arr, int currentSize) {
+        int[] positions = new int[3]; // Dùng để trả về vị trí cần hoán đổi và chỉ số hiện tại
 
-        for (int i = n / 2 - 1; i >= 0; i--) {
-            heapify(arr, n, i, positions);
-        }
-        for (int i = n - 1; i > 0; i--) {
-            swap(arr, 0, i, positions);
-            heapify(arr, i, 0, positions);
+        if(currentSize <= 1) {
+            return null; // Quá trình sắp xếp đã hoàn tất
         }
 
-        if (positions[0] == -1 && positions[1] == -1) {
-            return null;
-        }
+        // Ghi lại vị trí cần hoán đổi
+        positions[0] = 0;
+        positions[1] = currentSize - 1;
+        positions[2] = currentSize - 1; // Cập nhật chỉ số hiện tại để trả về
+
+        // Xây dựng lại heap từ root, nhưng không thực hiện hoán đổi ở đây
+        heapify(arr, currentSize, 0);
+
         return positions;
     }
 
-    private static void heapify(int[] arr, int n, int i, int[] positions) {
+    // Xác định vị trí lớn nhất trong heap, nhưng không thực hiện hoán đổi
+    private static void heapify(int[] arr, int n, int i) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
@@ -32,18 +33,9 @@ public class HeapSort {
             largest = right;
         }
 
-
         if (largest != i) {
-            swap(arr, i, largest, positions);
-            heapify(arr, n, largest, positions);
+            // Tiếp tục xác định vị trí lớn nhất trong heap
+            heapify(arr, n, largest);
         }
-    }
-
-    private static void swap(int[] arr, int i, int j, int[] positions) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        positions[0] = i;
-        positions[1] = j;
     }
 }

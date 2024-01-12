@@ -1,37 +1,49 @@
 package com.Controller;
 
 import com.MainApp;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.event.ActionEvent;
 
-public class MainMenuController {
+public class MainMenuController extends MainApp {
     @FXML
-    private RadioButton ButtonManual;
+    private RadioButton ButtonBubbleSort;
 
     @FXML
-    private RadioButton ButtonAutomatic;
+    private RadioButton ButtonHeapSort;
 
-    private ToggleGroup radioButtonGroup;
+    @FXML
+    private RadioButton ButtonShellSort;
+
+    private ToggleGroup toggleGroup;
 
     @FXML
     public void initialize() {
-        radioButtonGroup = new ToggleGroup();
-        ButtonManual.setToggleGroup(radioButtonGroup);
-        ButtonAutomatic.setToggleGroup(radioButtonGroup);
+        toggleGroup = new ToggleGroup();
+        ButtonBubbleSort.setToggleGroup(toggleGroup);
+        ButtonHeapSort.setToggleGroup(toggleGroup);
+        ButtonShellSort.setToggleGroup(toggleGroup);
+    }
+
+    public static String SortType;
+    @FXML
+    void handleButtonConfirm(ActionEvent event) {
+        if (toggleGroup.getSelectedToggle() != null) {
+            RadioButton selectedRadioButton = (RadioButton) toggleGroup.getSelectedToggle();
+            if (selectedRadioButton == ButtonBubbleSort) {
+                MainMenuController.SortType = "BubbleSort";
+            } else if (selectedRadioButton == ButtonHeapSort) {
+                MainMenuController.SortType = "HeapSort";
+            } else if (selectedRadioButton == ButtonShellSort) {
+                MainMenuController.SortType = "ShellSort";
+            }
+            loadScene("SortingAlgorithmDemo.fxml");
+        }
     }
 
     @FXML
-    void handleButtonConfirm(ActionEvent event) {
-        if (radioButtonGroup.getSelectedToggle() != null) {
-            RadioButton selectedRadioButton = (RadioButton) radioButtonGroup.getSelectedToggle();
-            if (selectedRadioButton == ButtonAutomatic) {
-                MainApp.loadscene("ChoosingSortType.fxml");
-            } else if (selectedRadioButton == ButtonManual) {
-                MainApp.loadscene("Inputdata.fxml");
-            }
-        }
+    void handleButtonExit(ActionEvent event) {
+        System.exit(0);
     }
 }

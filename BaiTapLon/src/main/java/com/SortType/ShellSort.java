@@ -1,33 +1,38 @@
 package com.SortType;
 
 public class ShellSort {
-    public static int[] shellSortWithPositions(int[] arr) {
+    public static int[] shellSortWithPositions(int[] arr, int gap, int i) {
         int n = arr.length;
-        int[] positions = new int[2];
+        int[] positions = new int[4];
 
-        for (int gap = n / 2; gap > 0; gap /= 2) {
-            for (int i = gap; i < n; i++) {
-                int temp = arr[i];
-                int j;
-                for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
-                    swap(arr, j, j - gap, positions);
+        if (gap == 0) {
+            gap = n / 2;  // Khởi tạo giá trị gap
+        }
+
+        while (gap > 0) {
+            if (i < n) {
+                int j = i;
+                int temp = arr[i];  // Lưu giá trị tại vị trí i
+
+                if (j >= gap && arr[j - gap] > temp) {
+                    // Hoán đổi phần tử arr[j] và arr[j - gap]
+                    arr[j] = arr[j - gap];
+                    arr[j - gap] = temp;
+
+                    positions[0] = j - gap;
+                    positions[1] = j;
+                    positions[2] = gap;
+                    positions[3] = i + 1;
+                    return positions;
                 }
-                arr[j] = temp;
+                i++;
+            } else {
+                // Khi đã xử lý xong một "gap", giảm giá trị của "gap"*
+                gap = gap / 2;
+                i = 0;
             }
         }
-
-        if (positions[0] == -1 && positions[1] == -1) {
-            return null;
-        }
-
-        return positions;
-    }
-
-    private static void swap(int[] arr, int i, int j, int[] positions) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        positions[0] = i;
-        positions[1] = j;
+        return null;  // finish
     }
 }
+
